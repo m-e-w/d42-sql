@@ -1,6 +1,6 @@
 /*
  Title
- PEM - Power and Environmental Monitoring
+ PEM - Time Series Data
  Description
  Displays power / environmental data by location.
  
