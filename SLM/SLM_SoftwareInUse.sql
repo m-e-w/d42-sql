@@ -24,11 +24,13 @@ SELECT
     d.os_name "Operating System",
     d.os_version "OS Version",
     CASE
+        WHEN sweol.version IS NULL THEN ''
         WHEN siu.version <= sweol.version
         AND CURRENT_DATE >= sweol.eol THEN 'True'
         ELSE 'False'
     END AS "CALC: EOL",
     CASE
+        WHEN sweol.version IS NULL THEN ''
         WHEN siu.version <= sweol.version
         AND CURRENT_DATE >= sweol.eos THEN 'True'
         ELSE 'False'
